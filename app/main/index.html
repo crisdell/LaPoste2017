@@ -1,0 +1,31 @@
+<div class="row animated fadein" ng-if="vm.state.current.name == 'main'">
+    <div class="animated flipinx" ng-class="nav.cssClass" ng-repeat="nav in vm.navItems">
+        <div class="tile-nav-item" ng-click="vm.go(nav)">
+            <div ng-if="nav.content">
+                <ng-include src="'../app/tiles/' + nav.content"></ng-include>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row animated fadein"  ng-if="vm.state.current.name != 'main'">
+    <div class="col-lg-2 col-md-3 hidden-sm hidden-xs">
+        <div ng-repeat="nav in vm.navLeft" class="tile-nav-item animated slideInLeft" ng-if="!vm.isActive(nav)" ng-click="vm.go(nav)">
+            <div ng-if="nav.content">
+                <ng-include src="'../app/tiles/' + nav.content"></ng-include>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-6">
+        <div class="the-content">
+            <ui-view></ui-view>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-3 hidden-sm hidden-xs">
+        <div ng-repeat="nav in vm.navRight" class="tile-nav-item animated slideInRight" ng-if="!vm.isActive(nav)" ng-click="vm.go(nav)">
+            <div ng-if="nav.content">
+                <ng-include src="'../app/tiles/' + nav.content"></ng-include>
+            </div>
+        </div>
+    </div>
+</div>

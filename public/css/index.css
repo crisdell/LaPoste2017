@@ -1,0 +1,92 @@
+body {
+    background: #efefef;
+}
+.container-main {
+    margin: 0px 15px;
+}
+.tile-nav-item {
+    background: #fff;
+    min-height: 198px;
+    min-width: 198px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px #ccc;
+    margin: 5px -10px;
+}
+.tile-nav-item.side {
+    background: #b1c7ea;
+}
+.tile-nav-item:hover {
+    box-shadow: 1px 2px 4px #aaa;
+}
+.tile-title {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.tile-content {
+    padding: 15px;
+}
+
+.tile-content-right{
+    text-align: right!important;
+}
+
+.content-no-padding {
+    padding: 0px!important;
+}
+
+.animated {
+    animation-duration: 0.5s;
+}
+
+.step-tile {
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 198px;
+    cursor: pointer;
+}
+
+.step-tile .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13pt;
+    position: absolute;
+}
+.row-nomargin {
+    margin: 0px;
+}
+.step-tile.step-1 {
+    background-image: url('../img/1.png');
+}
+.step-tile.step-2 {
+    background-image: url('../img/2.png');
+}
+.step-tile.step-3 {
+    background-image: url('../img/3.png');
+}
+.step-tile.step-4 {
+    background-image: url('../img/4.png');
+}
+.step-tile.step-5 {
+    background-image: url('../img/5.png');
+}
+.step-tile.step-6 {
+    background-image: url('../img/6.png');
+}
+.step-tile.step-7 {
+    background-image: url('../img/7.png');
+}
+
+.the-content {
+    background: #fff;
+    padding: 15px;
+    margin-top: 5px;
+    margin-left: -10px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px #ccc;
+}
+
+.paragraph p{
+    margin: 0.5em;
+    margin-left: 1.5em;
+}

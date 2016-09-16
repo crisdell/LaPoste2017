@@ -1,0 +1,83 @@
+<div ng-controller="StepOneController as s">
+	<div class="page-header">
+		<div class="page-title">
+			<h1>ETRE ENCORE PLUS ATTENTIFS A NOS CLIENTS BANCAIRES</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12" ng-repeat="subStep in s.subSteps">
+			<h3>{{$index + 1}}. {{subStep.title}}</h3>
+			<div class="row">
+				<div class="col-lg-12">
+
+					<div class="study-1 study animated fadeinup" ng-if="subStep.study1.length > 0">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6"
+								ng-repeat="kpi in subStep.study1">
+								<div class="kpi-title"><strong>{{kpi.title}}</strong></div>
+								<div class="row">
+									<div class="col-lg-3"><div class="kpi-score">{{kpi.score}}{{kpi.unit}}</div></div>
+									<div class="col-lg-9">
+										<canvas tc-chartjs-line chart-data="kpi.trend" chart-options="s.lineChart.options" height="90"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="study-2 study animated fadeinup" ng-if="subStep.study2.length > 0">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6"
+								ng-repeat="kpi in subStep.study2">
+								<div class="kpi-title"><strong>{{kpi.title}}</strong></div>
+								<div class="row">
+									<div class="col-lg-3"><div class="kpi-score">{{kpi.score}}{{kpi.unit}}</div></div>
+									<div class="col-lg-9">
+										<canvas tc-chartjs-line chart-data="kpi.trend" chart-options="s.lineChart.options" height="90"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-1">
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	.kpi-score {
+		font-size: 25pt;
+		padding: 10px;
+		margin-top: 20px 10px;
+		font-weight: bold;
+	}
+
+	.study {
+		padding: 15px;
+		margin: 10px 0px;
+		border: 0px solid #ccc;
+		border-right: 10px solid;
+		border-radius: 5px;
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding-right: 80px;
+	}
+
+	.study.study-2 {
+		background-image: url('../public/img/qualite_percus_2016_icon.png');
+		background-color: rgba(247,190,32,0.1);
+		border-color: rgba(247,190,32,0.4);
+	}
+
+	.study.study-1 {
+		background-image: url('../public/img/qualite_service_icon.png');
+		background-color: rgba(76,142,178,0.1);
+		border-color: rgba(76,142,178,0.4);
+	}
+</style>
