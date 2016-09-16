@@ -7,6 +7,7 @@
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../vendor/gridster/angular-gridster.min.css" rel="stylesheet">
         <link href="../vendor/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendor/angular/angular-motion.min.css" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
         <link href="css/laposte.css" rel="stylesheet">
     </head>
@@ -19,10 +20,10 @@
                 <div class="pull-right user-controls">
                     <i class="glyphicon glyphicon-user"></i> Jean Luc / <i class="glyphicon glyphicon-log-in"></i> <a>Deconnexion</a>
                 </div>
-                <div class="pull-right user-controls">
+                <div class="pull-right user-controls" ng-click="app.selectLoca()">
                     <i class="glyphicon glyphicon-home"></i> Sector : Lille</a>
                 </div>
-                <div class="pull-right user-controls">
+                <div class="pull-right user-controls" ng-click="app.selectPeriod()">
                     <i class="glyphicon glyphicon-calendar"></i> Mois en cours</a>
                 </div>
             </div>
@@ -40,7 +41,7 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#/main"><i class="glyphicon glyphicon-th"></i> Sythese</a></li>
+                        <li class="active"><a href="#/main"><i class="glyphicon glyphicon-th"></i> Synth&egrave;se</a></li>
                         <li><a href="#about"><i class="glyphicon glyphicon-eye-open"></i> Observer</a></li>
                         <li><a href="#contact"><i class="glyphicon glyphicon-random"></i> Comparer</a></li>
                         <li><a href="#about"><i class="glyphicon glyphicon-share-alt"></i> Agir</a></li>
@@ -64,6 +65,9 @@
         <script src="../vendor/chartjs/Chart.min.js"></script>
         <script src="../vendor/chartjs/Chart.bundle.min.js"></script>
         <script src="../vendor/chartjs/tc-angular-chartjs.min.js"></script>
+        <script src="../vendor/angular/angular-animate.min.js"></script>
+        <script src="../vendor/angular/angular-strap.min.js"></script>
+        <script src="../vendor/angular/angular-strap.tpl.min.js"></script>
         <script src="../app/app.js"></script>
         <script src="../app/navigation.js"></script>
         <script src="../app/main/main.js"></script>

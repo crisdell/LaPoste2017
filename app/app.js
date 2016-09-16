@@ -1,10 +1,10 @@
 (function() {
     'use strict';
 
-    angular.module('zoop.LaPoste', ['tc.chartjs','ui.router'])
+    angular.module('zoop.LaPoste', ['tc.chartjs','ui.router', 'mgcrea.ngStrap'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
-        //$urlRouterProvider.otherwise('/main');
+        $urlRouterProvider.otherwise('/main');
         $stateProvider
             .state('main', {
                 url: '/main',
@@ -24,11 +24,25 @@
 
     .controller('AppController', AppController);
 
-    AppController.$inject = ['$state'];
+    AppController.$inject = ['$state', '$modal', '$aside'];
 
-    function AppController($state) {
-
-
+    function AppController($state, $modal, $aside) {
+        var vm = this;
+        vm.locaModal = $modal({
+            templateUrl: '../app/modals/select-loca.html',
+            show: false
+        });
+        vm.periodAside = $aside({
+            title: 'Period',
+            content: 'Test',
+            show: false
+        });
+        vm.selectLoca = function() {
+            vm.locaModal.$promise.then(vm.locaModal.show);
+        };
+        vm.selectPeriod = function() {
+            vm.periodAside.$promise.then(vm.periodAside.show);
+        }
     }
 
 }())

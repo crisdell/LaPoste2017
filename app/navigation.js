@@ -8,7 +8,7 @@
     function NavFactory($state, $stateParams) {
         var self = this;
         var steps = ['30 Premieres secondes', 'Servir les clients dans les meilleurs delais','Etre attentifs a nos clients bancaires',
-            'Personaliser la relation avec les clients pros', 'Etre presents a chaque instant', 'Proches, accessibles et connectes',
+            'Personnaliser la relation avec les clients pros', 'Etre presents a chaque instant', 'Proches, accessibles et connectes',
             'L\'avis de nos clients nous importe'];
         var pos = [{
             'top': 85,
@@ -37,12 +37,6 @@
         }];
 
         self.navItems = [{
-            name: 'Mon implication client',
-            direction: 'down',
-            state: null,
-            content: 'mon-implication-client.html',
-            size: 2
-        },{
             name: 'step-1',
             direction: 'down',
             state: 'main.steps',
@@ -112,6 +106,12 @@
                 position: pos[6]
             },
             content: 'steps.html'
+        },{
+            name: 'Mon implication client',
+            direction: 'down',
+            state: null,
+            content: 'mon-implication-client.html',
+            size: 2
         },{
             name: 'Synergie',
             direction: 'left',
